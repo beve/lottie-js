@@ -6,7 +6,7 @@
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
   "types": "dist/index.d.ts",
-  "repository": "https://github.com/LottieFiles/lottie-js",
+  "repository": "https://github.com/beve/lottie-js",
   "license": "MIT",
   "keywords": [
     "Lottie",
@@ -15,9 +15,12 @@
     "Lottie JSON",
     "LottieFiles"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
+  "files": [
+	"dist/index.cjs.js",
+	"dist/index.esm.js",
+	"dist/index.umb.js",
+	"dist/index.d.ts"
+  ],
   "author": "Jawish Hameed <jawish@lottiefiles.com>",
   "scripts": {
     "build": "yarn build:prod",
@@ -29,7 +32,8 @@
     "prepack": "yarn run lint && yarn clean && npm run build:prod",
     "release": "yarn build && yarn changeset version && yarn changeset publish",
     "test": "jest",
-    "test:dev": "jest --watch --coverage"
+    "test:dev": "jest --watch --coverage",
+    "prepare": "yarn build"
   },
   "engines": {
     "node": ">=12.0.0"
