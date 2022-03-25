@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: 16
       - run: yarn
-      - run: build
+      - run: yarn build
       - run: yarn lint 
 
   publish-gpr:
