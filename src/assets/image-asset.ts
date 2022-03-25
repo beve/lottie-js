@@ -14,6 +14,8 @@ export class ImageAsset extends Asset {
 
   public width!: number;
 
+  public embedded?: number;
+
   /**
    * Convert the Lottie JSON object to class instance.
    *
@@ -26,6 +28,7 @@ export class ImageAsset extends Asset {
     this.height = json.h;
     this.path = json.u;
     this.width = json.w;
+    this.embedded = json.e;
 
     return this;
   }
@@ -40,10 +43,11 @@ export class ImageAsset extends Asset {
   public toJSON(): Record<string, any> {
     return {
       h: this.height,
-      i: this.id,
+      id: this.id,
       p: this.data,
       u: this.path,
       w: this.width,
+      e: this.embedded,
     };
   }
 }
