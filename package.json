@@ -15,12 +15,6 @@
     "Lottie JSON",
     "LottieFiles"
   ],
-  "files": [
-	"dist/index.cjs.js",
-	"dist/index.esm.js",
-	"dist/index.umb.js",
-	"dist/index.d.ts"
-  ],
   "author": "Jawish Hameed <jawish@lottiefiles.com>",
   "scripts": {
     "build": "yarn build:prod",
@@ -32,8 +26,7 @@
     "prepack": "yarn run lint && yarn clean && npm run build:prod",
     "release": "yarn build && yarn changeset version && yarn changeset publish",
     "test": "jest",
-    "test:dev": "jest --watch --coverage",
-    "prepare": "yarn build"
+    "test:dev": "jest --watch --coverage"
   },
   "engines": {
     "node": ">=12.0.0"
