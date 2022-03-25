@@ -1,12 +1,15 @@
 {
-  "name": "@lottiefiles/lottie-js",
-  "version": "0.3.6",
+  "name": "@beve/lottie-js",
+  "version": "0.3.7",
   "description": "Lottie JSON model for Javascript/Typescript",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
   "types": "dist/index.d.ts",
-  "repository": "https://github.com/LottieFiles/lottie-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beve/lottie-js"
+  },
   "license": "MIT",
   "keywords": [
     "Lottie",
@@ -15,9 +18,6 @@
     "Lottie JSON",
     "LottieFiles"
   ],
-  "publishConfig": {
-    "access": "public"
-  },
   "author": "Jawish Hameed <jawish@lottiefiles.com>",
   "scripts": {
     "build": "yarn build:prod",
@@ -27,7 +27,7 @@
     "docs": "typedoc --plugin none",
     "lint": "eslint --fix --ext .ts,.js .",
     "prepack": "yarn run lint && yarn clean && npm run build:prod",
-    "release": "yarn build && yarn changeset version && yarn changeset publish",
+    "release": "yarn build",
     "test": "jest",
     "test:dev": "jest --watch --coverage"
   },
