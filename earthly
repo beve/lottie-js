@@ -1,0 +1,7 @@
+#!/bin/bash
+# A tiny wrapper to pass options and args required for all the Earthly
+# targets of this repo
+
+ROOT_DIR=$(dirname "$0")
+NODEJS_VERSION=$(grep nodejs ${ROOT_DIR}/.tool-versions | cut -d ' ' -f 2)
+earthly --secret NPM_AUTH_TOKEN $@ --NODEJS_VERSION=${NODEJS_VERSION}
