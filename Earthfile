@@ -25,4 +25,4 @@ publish:
     BUILD +lint
     BUILD +test
     FROM +build
-    RUN --secret NPM_AUTH_TOKEN yarn publish
+    RUN --secret NPM_AUTH_TOKEN yarn publish --registry https://npm.pkg.github.com/
