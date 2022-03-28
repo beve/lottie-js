@@ -26,7 +26,6 @@
     "clean": "del-cli --force coverage dist docs",
     "docs": "typedoc --plugin none",
     "lint": "eslint --fix --ext .ts,.js .",
-    "prepack": "yarn lint && yarn clean && yarn build:prod",
     "release": "yarn build",
     "test": "jest",
     "test:dev": "jest --watch --coverage"
